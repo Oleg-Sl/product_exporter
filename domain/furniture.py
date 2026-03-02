@@ -1,3 +1,4 @@
+from typing import Optional
 from dataclasses import dataclass
 
 from .value_objects.dimensions import Dimensions
@@ -5,7 +6,7 @@ from .value_objects.prices import Prices
 
 
 class Furniture:
-    def __init__(self, item_id: int, title: str, collection: str, dimensions: Dimensions, prices: Prices, fabric_consumption: float):
+    def __init__(self, item_id: int, title: str, collection: Optional[str], dimensions: Dimensions, prices: Prices, fabric_consumption: float):
         self.id = item_id
         self.title = title
         self.collection = collection

@@ -1,8 +1,9 @@
+from typing import Optional
 from dataclasses import dataclass
 
 
 @dataclass(frozen=True)
 class Dimensions:
-    width: float
-    height: float
-    depth: float
+    width: Optional[float]
+    height: Optional[float]
+    depth: Optional[float]

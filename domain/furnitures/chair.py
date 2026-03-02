@@ -1,10 +1,11 @@
+from typing import Optional
+
 from domain.value_objects.dimensions import Dimensions
 from domain.value_objects.prices import Prices
 from ..furniture import Furniture
 
 
 class Chair(Furniture):
-    def __init__(self, item_id: int, title: str, collection: str, dimensions: Dimensions, prices: Prices, fabric_consumption: float, size: str, top: str):
+    def __init__(self, item_id: int, title: str, collection: Optional[str], dimensions: Dimensions, prices: Prices, fabric_consumption: float):
         super().__init__(item_id, title, collection, dimensions, prices, fabric_consumption)
-        self.size = size
-        self.top = top
+
